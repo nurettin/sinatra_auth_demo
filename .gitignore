@@ -1,0 +1,5 @@
+# temporary files
+*.sw*
+# database
+db/db.sqlite3
+

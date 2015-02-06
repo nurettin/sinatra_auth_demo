@@ -1,0 +1,47 @@
+<div id="sinatra_authentication">
+  <% if Rack.const_defined?('Flash') && flash[:notice] %>
+    <div id="sinatra_authentication_flash">
+      <%= flash[:notice] %>
+    </div>
+  <% end %>
+  <% if Rack.const_defined?('Flash') && flash[:error] %>
+    <div id="sinatra_authentication_flash">
+      <%= flash[:error] %>
+    </div>
+  <% end %>
+  <h1 class="page_title">Sign Up</h1>
+  <form action="/signup" method="post">
+    <div class="field">
+      <div class="label">
+        <label for="user_email">Email</label>
+      </div>
+      <input id="user_email" name="user[email]" size="30" type="text" value="<%= params[:email] %>"></input>
+    </div>
+    <div class="field">
+      <div class="label">
+        <label for="user_password">Password</label>
+      </div>
+      <input id="user_password" name="user[password]" size="30" type="password"></input>
+    </div>
+    <div class="field">
+      <div class="label">
+        <label for="user_password_confirmation">Confirm Password</label>
+      </div>
+      <input id="user_password_confirmation" name="user[password_confirmation]" size="30" type="password"></input>
+    </div>
+    <div class="buttons">
+      <input type="submit" value="Sign up"></input>
+      <a class="sinatra_authentication_link" href="/login">
+        Login
+      </a>
+    </div>
+    <% if Sinatra.const_defined?('FacebookObject') %>
+      <div class="third_party_signup">
+        <h3 class="section_title">One click signup:</h3>
+        <div class="login_link facebook_login">
+          <%= render_facebook_connect_link('Signup using facebook', :size => 'large') %>
+        </div>
+      </div>
+    <% end %>
+  </form>
+</div>

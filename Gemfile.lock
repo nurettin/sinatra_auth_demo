@@ -1,0 +1,59 @@
+GIT
+  remote: git://github.com/sinatra/sinatra.git
+  revision: cad128a4c2f881096d7775de22c71633d4c218b6
+  specs:
+    sinatra (1.4.5)
+      rack (~> 1.4)
+      rack-protection (~> 1.4)
+      tilt (>= 1.3, < 3)
+
+GIT
+  remote: git://github.com/zop/sinatra-authentication.git
+  revision: b63fbca67f5459fdaa179714934ff10f0df3806c
+  specs:
+    sinatra-authentication (0.4.2)
+      dm-core
+      dm-migrations
+      dm-timestamps
+      dm-validations
+      rack-flash3
+      rufus-tokyo
+      sinatra
+      sinbook
+
+GEM
+  remote: https://rubygems.org/
+  specs:
+    addressable (2.3.7)
+    dm-core (1.2.1)
+      addressable (~> 2.3)
+    dm-migrations (1.2.0)
+      dm-core (~> 1.2.0)
+    dm-timestamps (1.2.0)
+      dm-core (~> 1.2.0)
+    dm-validations (1.2.0)
+      dm-core (~> 1.2.0)
+    haml (4.0.6)
+      tilt
+    rack (1.6.0)
+    rack-flash3 (1.0.5)
+      rack
+    rack-protection (1.5.3)
+      rack
+    rufus-tokyo (1.0.7)
+    sequel (4.19.0)
+    sinbook (0.1.9)
+      yajl-ruby
+    sqlite3 (1.3.10)
+    tilt (2.0.1)
+    yajl-ruby (1.2.1)
+
+PLATFORMS
+  ruby
+
+DEPENDENCIES
+  haml
+  sequel
+  sinatra!
+  sinatra-authentication!
+  sqlite3

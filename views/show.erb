@@ -1,0 +1,14 @@
+<div id="sinatra_authentication">
+  <h1 class="page_title">
+    <% if @user.email %>
+      <%= @user.email %>
+    <% elsif @user.fb_uid %>
+      <fb:name uid=#{@user.fb_uid} linked='false' />
+    <% end %>
+  </h1>
+  <% if current_user.admin? %>
+    <h2>permission level</h2>
+    <%= @user.permission_level %>
+  <% end %>
+</div>
+
