@@ -33,8 +33,6 @@ GEM
       dm-core (~> 1.2.0)
     dm-validations (1.2.0)
       dm-core (~> 1.2.0)
-    haml (4.0.6)
-      tilt
     rack (1.6.0)
     rack-flash3 (1.0.5)
       rack
@@ -52,7 +50,6 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
-  haml
   sequel
   sinatra!
   sinatra-authentication!
